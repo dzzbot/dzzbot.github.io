@@ -1,0 +1,29 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>剧能搜</title>
+  <style>
+    body{
+      margin: 0;
+      padding: 0;
+    }
+    iframe{
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+<iframe id="vod" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" oallowfullscreen="true" msallowfullscreen="true" style="width: 100%;height: 100%" src="" ></iframe>
+</body>
+<script>
+  function getQueryString(name) {
+    const url_string = window.location.href
+    const url = new URL(url_string);
+    return url.searchParams.get(name);
+  }
+  var ids = getQueryString("ids")
+  document.getElementById("vod").src = "http://120.46.64.226/video.html?ids=" + ids
+</script>
+
+</html>
